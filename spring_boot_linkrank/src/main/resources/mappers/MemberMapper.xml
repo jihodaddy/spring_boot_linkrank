@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.boot.linkrank.member.IMemberDAO">
+	<resultMap id="memResult" type="com.boot.linkrank.member.MemberVO">
+		<result property="memId" column="memId" />
+		<result property="memPwd" column="memPwd" />
+		<result property="memName" column="memName" />
+		<result property="memEmail" column="memEmail" />
+		<result property="memJoinDate" column="memJoinDate" />	
+		<result property="memHp1" column="memHp1" />	
+		<result property="memHp2" column="memHp2" />	
+		<result property="memHp3" column="memHp3" />	
+		<result property="memZipcode" column="memZipcode" />	
+		<result property="memAddress1" column="memAddress1" />	
+		<result property="memAddress2" column="memAddress2" />	
+	</resultMap>
+	
+	<!-- 로그인 확인 -->
+		<select id="loginCheck" resultMap="memResult" parameterType="hashmap">
+			SELECT * FROM member WHERE memId=#{id} AND memPwd=#{pwd}
+		</select>
+	 
+	<!-- ID 중복 확인 -->
+		<select id="memIdCheck" resultType="string" parameterType="string">
+			SELECT memId FROM member WHERE memId =#{memId}
+		</select>
+		
+	<!-- 회원가입  -->
+		<insert id="joinMember" parameterType="com.boot.linkrank.member.MemberVO">
+			INSERT INTO member 
+				(memId, memPwd, memName, memEmail, memHp1, memHp2, memHp3,
+				 memZipcode, memAddress1, memAddress2)
+  			VALUES (
+  				 #{memId},
+  				 #{memPwd},
+  				 #{memName},
+  				 #{memEmail},
+  				 #{memHp1},
+  				 #{memHp2},
+  				 #{memHp3},
+  				 #{memZipcode},
+  				 #{memAddress1},
+  				 #{memAddress2}
+  				 )
+		</insert>
+		
+		<!-- 전체 멤버 조회  -->
+		<select id="listAllMember" resultMap="memResult">
+  			SELECT * FROM member ORDER BY memId
+  		</select>  
+  		
+  		<!-- 멤버 상세 정보 조회  -->
+  		<select id="detailViewMember" 
+  					parameterType="string" 
+  					resultType="com.boot.linkrank.member.MemberVO">
+  			SELECT * FROM member WHERE memId = #{memId} 		
+  		</select>
+  				
+		<!-- 회원 정보 수정 -->
+  		<update id="updateMember" parameterType="com.boot.linkrank.member.MemberVO">
+  			UPDATE member SET  
+				memPwd = #{memPwd},  			
+  				memName = #{memName},
+  				memEmail = #{memEmail},
+  				memHp1 = #{memHp1},
+  				memHp2 = #{memHp2},
+  				memHp3 = #{memHp3},
+  				memZipcode = #{memZipcode},
+  				memAddress1 = #{memAddress1},
+  				memAddress2 = #{memAddress2}
+  			WHERE memId = #{memId}
+  		</update>
+		
+		<!-- 회원 정보 삭제  -->
+  		<delete id="deleteMember"  parameterType="string">
+  			DELETE FROM member WHERE memId = #{memId}
+  		</delete>
+  		
+  		
+		
+</mapper>

@@ -1,0 +1,86 @@
+/* index.css */
+
+/******* 기본설정 ******/
+*{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#wrapper{
+    width:1280px;
+	text-align:center;
+	position:relative;
+}
+/* section{
+    background-color: #212121;
+} */
+
+#sectionBox{
+	background-color: #212121;
+}
+img{
+    border: 0;
+    margin: 0;
+}
+ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* footer */
+#footerBox div{
+	background-color: #1b0000;
+	border:solid 1px #999999;
+	margin-top:10px;
+	padding:20px;
+	margin:0;
+}
+.social{
+    margin: 15px;
+}
+#bottomMenuItem{
+    height: 20px;
+    text-align: center;
+}
+#bottomMenuItem li{
+    float: left;
+    padding: 0 50px;
+    margin-left: 20px;
+}
+#bottomMenuItem li a{
+    color: white;
+}
+#bottomMenuItem li:hover{
+    text-decoration: underline;
+}
+#companyInfo{
+    color: white;
+}
+#moveToTop:hover{
+	opacity:0.7;
+	cursor:pointer;
+}
+
+
+
+#ratingWrap{
+	background-color: white;
+}
+
+#bottomSectionBox h2{
+    color: white;
+    padding: 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+}
+
+

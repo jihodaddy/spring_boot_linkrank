@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.boot.linkrank.board.IBoardDAO">
+  		<resultMap id="boardResult" type="com.boot.linkrank.board.BoardVO" >
+  			<result property="boardNo" column="boardNo"/>
+  			<result property="movieNo" column="movieNo"/>
+  			<result property="boardTitle" column="boardTitle"/>
+  			<result property="boardContent" column="boardContent"/>
+  			<result property="boardRating" column="boardRating"/>
+  		</resultMap>
+  
+  
+  	<!-- 전체 게시글 조회  -->
+		<select id="listAllBoard" resultType="com.boot.linkrank.board.BoardVO">
+  			SELECT b.boardNo,
+						b.boardTitle,
+						b.boardContent,
+						b.boardRating,
+						b.memId,
+						b.movieNo,
+						m.movieName 
+			FROM r_board b
+			INNER JOIN moviedb m
+			ON b.movieNo = m.movieNo
+  		</select>  
+  		
+	<!-- 게시글 상세 정보 조회  -->
+		<select id="detailViewBoard" 
+					parameterType="string" 
+					resultType="com.boot.linkrank.board.BoardVO">
+			SELECT b.boardNo,
+						b.boardTitle,
+						b.boardContent,
+						b.boardRating,
+						b.memId,
+						b.movieNo,
+						m.movieName 
+			FROM r_board b, moviedb m
+			WHERE  b.movieNo = m.movieNo AND boardNo = #{boardNo} 		
+		</select>
+  		
+	<!--	영화 상세화면에 평점 게시판 조회 -->
+		<select id="detailMovieBoardView" 
+					parameterType="string" 
+					resultType="com.boot.linkrank.board.BoardVO">
+			SELECT * FROM r_board WHERE movieNo = #{movieNo} 		
+		</select>
+  		
+  	<!-- 게시글 작성  -->
+  		<insert id="writeBoard" parameterType="com.boot.linkrank.board.BoardVO">
+  			INSERT INTO r_board
+  				  (boardTitle,
+  				   boardContent,
+  				   boardWriter, 
+  				   memId, 
+  				   movieNo, 
+  				   boardRating )
+  			VALUES(
+  				   #{boardTitle},
+  				   #{boardContent},
+  				   #{boardWriter}, 
+  				   #{memId}, 
+  				   #{movieNo}, 
+  				   #{boardRating} 
+  				   )
+  		</insert>
+  		
+  		<!-- 게시글 삭제 -->
+  		<delete id="deleteBoard" parameterType="String">
+  			DELETE FROM r_board WHERE boardNo = #{boardNo}
+  		</delete>
+  		
+</mapper>

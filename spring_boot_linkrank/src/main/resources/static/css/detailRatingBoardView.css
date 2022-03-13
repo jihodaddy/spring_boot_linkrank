@@ -1,0 +1,23 @@
+/* detailRaitingBoardView */
+
+.detailRatingWrap{
+	margin: 50px, 0 auto;
+	background-color: white;
+}
+
+.ratingBoard{
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 900px;	
+}
+.ratingBoard th{
+	color: #168;
+  	background: #f0f6f9;
+}
+.ratingBoard th, .ratingBoard td{
+	 padding: 10px;
+  	border: 1px solid #ddd;
+}
+
+
+	

@@ -1,0 +1,108 @@
+/* login.css */
+
+h1{
+    margin-bottom: 3px;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+.loginBox{
+    background: white;
+    width: 1280px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
+}
+#idBox, #pwBox{
+    width: 465px;
+    height: 48px;
+    border: solid 1px black;
+    background: white;
+}
+#idBox{
+    margin-top: 25px;
+}
+#pwBox{
+    margin-top: 13px;
+}
+.loginBox input{
+    border:none;
+    width: 430px;
+    margin-top: 10px;
+    font-size: 14px;
+    margin-left: 10px;
+    height:30px;
+}
+
+
+#loginButton{
+    width: 465px;
+    height: 48px;
+    margin-top: 13px;
+    font-size: 18px;
+    background: #3e2723;
+    color: white;
+    border: solid 1px black;
+}
+
+.socialLoginBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.socialLoginBox h2{
+    font-size: 20px;
+}
+.socialLoginList{
+    padding-top: 25px;
+    list-style: none;
+    width: 465px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socialLoginList li{
+    padding-bottom: 10px;
+}
+.kakaoLoginButton{
+    background-color: #fae100;
+    color: black;
+}
+.googleLoginButton{
+    background-color: #ff3e30;
+    color: white;
+}
+.naverLoginButton{
+    background-color: #2db400;
+    color: white;
+}
+
+.socialLoginList li button{
+    width: 465px;
+    height: 56px;
+    /* border: solid 1px black; */
+    border: none;
+    text-align: left;
+}
+
+.socialLoginList li button span{
+    padding-left: 20px;
+    line-height: 56px;
+    font-size: 18px;
+}
+.forgetMsg{
+    font-size: 14px;
+    padding-top: 10px;
+    float:right;
+}
+.forgetMsg a{
+    text-decoration: none;
+    color: black;
+}

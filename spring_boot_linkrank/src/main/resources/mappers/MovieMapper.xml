@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.boot.linkrank.movie.IMovieDAO">
+  		<resultMap  id="movieResult" type="com.boot.linkrank.movie.MovieVO">
+  			<result property="movieNo" column="movieNo"/>
+  			<result property="movieName" column="movieName"/>
+  			<result property="movieDirector" column="movieDirector"/>
+  			<result property="movieActor" column="movieActor"/>
+  			<result property="movieDesc" column="movieDesc"/>
+  			<result property="movieImg" column="movieImg"/>
+  		</resultMap>
+  		
+  		
+  		<!-- 전체 영화 조회  -->
+		<select id="listAllMovie" resultType="com.boot.linkrank.movie.MovieVO">
+  			SELECT * FROM moviedb ORDER BY movieNo
+  		</select>  
+  		
+  		<!-- 	<select id="detailViewMovie" parameterType="string"
+  	 				resultType="com.boot.linkrank.movie.MovieVO">
+		  		SELECT m.movieNo,
+		  					m.movieName,
+		  				    m.movieDirector,
+		  				    m.movieActor,
+		  				    m.movieDesc,
+		  				    m.movieImg,
+		  				    i.mifUrl,
+		  				    b.boardNo,
+		  				    b.boardTitle,
+		  				    b.boardContent,
+		  				    b.boardWriter,
+		  				    b.boardLikeNo
+		  		FROM moviedb m, movieIframe i, r_board b
+		  		WHERE m.movieNo = i.movieNo 
+		  			OR m.movieNo = b.movieNo
+		  	    	AND	m.movieNo=#{movieNo}
+		  		
+  			</select>	  -->
+  		
+  		<!-- 영화 상세 화면 조회  -->
+  		 	<select id="detailViewMovie" parameterType="string"
+  	 				resultType="com.boot.linkrank.movie.MovieVO">
+		  		SELECT m.movieNo,
+		  					m.movieName,
+		  				    m.movieDirector,
+		  				    m.movieActor,
+		  				    m.movieDesc,
+		  				    m.movieImg,
+		  				    i.mifUrl
+				FROM moviedb m, movieIframe i
+		  		WHERE m.movieNo = i.movieNo AND m.movieNo= #{movieNo}
+		  		
+  			</select>	 
+  		
+  		<!-- 영화 정보 삭제  -->
+  		<delete id="deleteMovie"  parameterType="string">
+  			DELETE FROM moviedb WHERE movieNo = #{movieNo}
+  		</delete>
+  		
+  		
+  		
+  </mapper>

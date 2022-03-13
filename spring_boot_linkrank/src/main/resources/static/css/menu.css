@@ -1,0 +1,136 @@
+/* menu.css */
+
+/* ***************Header ****************/
+
+#headerBox{
+    background-color: #1a0000;
+    color: white;
+    height: 150px;
+    line-height: 55px;
+    padding: 0;
+}
+
+#logoBox{
+    float:left;
+    height: 50px;
+    line-height: 50px;
+}
+
+#logoBox img{
+    height: 80px;
+}
+
+#topMenuBox{
+	float: right;
+	font-weight: bold;
+	padding-right:10px;
+}
+
+#loginBox a{
+	color: white;
+	text-decoration: none;
+}
+#loginBox a:hover{
+	font-weight:bold;
+	background-color:lightgray;
+	padding: 3px;
+	border-radius: 5px;
+}
+
+
+
+/********** mainMenu *****************/
+#mainMenuBox{
+    height: 35px;
+	line-height: 35px;
+	background-color: #ffffff;
+	border-bottom: 1px solid black;
+    position: relative;
+
+}
+#mainMenuBox li{
+	float: left;
+	text-align:center;
+	width: 16%;
+	height: 30px;
+	line-height: 30px;
+    font-weight: bold;
+}
+
+/***************** searchBox ****************/
+#searchBox{
+    background-color: #484848;
+    color: white;
+    height: 55px;
+    font-size: 20px;
+}
+
+#searchBox div{
+    display: inline-block;
+}
+#searchBar{
+    padding: 10px;
+}
+#search{
+    width: 400px;
+    border: 2px solid #000000;
+    height: 30px;
+}
+#searchBtn{
+    width: 70px;
+    height:35px;
+    line-height: 35px;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+/**************** Menu ****************/
+#menuItem a{
+    text-decoration: none;
+    color: black;
+}
+
+#subMenuBox{
+	border-top: 1px solid black;
+	z-index: 200;  
+	padding-bottom: 0;
+	position:absolute;
+	visibility: hidden; 
+}
+
+
+#subMenuItem{
+	position:relative;
+    background-color: #484848;
+    padding: 10px 0;
+}
+
+#subMenuItem>ul>li{
+    display: block;
+    width: 200px;
+}
+#subMenuItem a{
+    display: block;
+    color:white;
+}
+#subMenuItem li:hover{
+    background: black;
+}
+#subMenuItem>ul>li>a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+
+.genreItem>.subGenre{
+    display: none;
+    position: absolute;
+    background: #212121;
+    top: 0px;
+    left:200px;
+    width: 200px;
+    z-index: 10;
+}
+
+

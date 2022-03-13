@@ -1,0 +1,64 @@
+/* slideShow */
+
+#rankSlideShow{
+    position: relative;
+	background-color: #212121;
+	height:840px;
+	line-height:520px;
+	border-bottom:solid #cccccc 1px;
+    
+}
+
+#rankSlideShow h2{
+    color: white;
+    padding: 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;    
+}
+
+.movieRank, .seriesRank{
+    width:1280px;
+	height:350px;
+	text-align:center;
+	overflow:hidden;
+}
+#movieSlidePanel, #seriesSlidePanel{
+	position:relative;
+	width:3045px;
+	height:410px;
+}
+
+.movieSlideImg, .seriesSlideImg{
+	float:left;
+	width:	224px;
+	height: auto;
+    padding: 15px;
+}
+.movieSlideImg:hover, .seriesSlideImg:hover{
+    opacity: 0.7;
+}
+
+/* prev/next 버튼 */
+.prevNextButtonBox{
+    position:relative; z-index:100;
+}
+.moviePrevButton, .seriesPrevButton{
+    position:absolute;
+    top:210px;
+    left:4%;
+    opacity:0.5;
+    cursor:pointer;}
+.movieNextButton, .seriesNextButton{
+    position:absolute;
+    top:210px;
+    right:4%;
+    opacity:0.5;
+    cursor:pointer;}
+
+.moviePrevButton:hover, .seriesPrevButton:hover{
+    
+    opacity:1;}
+.movieNextButton:hover, .seriesNextButton:hover{
+    opacity:1;}
+

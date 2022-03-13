@@ -1,0 +1,34 @@
+/* 
+	admin.css
+*/
+
+/* 관리자 메뉴*/
+#adminWrap{
+	background-color: white;
+	width:1280px;
+	
+}
+#adminMenuBox{
+	
+	position: relative;
+	width:1280px;
+	height:500px;
+}
+.adminItem{
+	float:left;
+	margin: 50px;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid black;
+	border-radius: 10px;
+	
+}
+
+.adminItem:hover{
+	background-color: yellow;
+}
+
+.adminItem a{
+	text-decoration: none;
+}
