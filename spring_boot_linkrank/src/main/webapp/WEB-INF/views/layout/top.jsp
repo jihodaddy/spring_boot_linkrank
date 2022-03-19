@@ -34,6 +34,7 @@
             
 	                    <!-- 비로그인 -->
 	                    <c:if test="${empty sessionScope.sid }">
+	                            <a href="<c:url value='/searchMovie'/>"> 네이버 </a>&nbsp;
 	                            <a href="<c:url value='/loginForm'/>"> Login </a>&nbsp;
 	                            <a href="<c:url value='/joinForm'/>">회원가입</a>
 	                   	</c:if>
@@ -57,9 +58,12 @@
                     <h4>장르/제목 검색</h4>
                 </div>
                 <div id="searchBar">
-                    <input type="text" id="search" placeholder="장르/제목/태그를 검색하세요." size="30">
-                    <input type="button" id="searchBtn" value="검색"></input>
+	                <form method="get" id="searchMovie" action="/searchMovie">
+	                    <input type="text" id="search" name="movieSearch" placeholder="영화를 검색하세요." size="30">
+	                    <input type="submit" id="searchBtn" value="검색"></input>
+                    </form>
                 </div>
+           
             </div> 
             <div id="mainMenuBox">
                 <ul id="menuItem">

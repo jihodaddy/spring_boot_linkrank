@@ -2,13 +2,12 @@ package com.boot.linkrank.movie;
 
 import java.util.ArrayList;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.boot.linkrank.board.BoardService;
 import com.boot.linkrank.board.BoardVO;
@@ -67,6 +66,16 @@ public class MovieController {
 		public String deleteMovie(@PathVariable String movieNo) {
 			service.deleteMovie(movieNo);
 			return "redirect:../movieListView";
+		}
+		
+		//네이버 api
+		@RequestMapping("/searchMovie")
+		public String searchMovie(@RequestParam("movieSearch") String keyword,
+													Model model) {
+			ArrayList<MovieVO> movieList = MovieSearchService.searchMovie(keyword);
+			model.addAttribute("keyword", keyword);
+			model.addAttribute("movieList", movieList);
+			return "movie/movieSearchView";
 		}
 		
 }

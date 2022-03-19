@@ -21,7 +21,7 @@ $(function(){
 
 
 	$(".genreItem").on({
-		mouseover:function(){
+		click:function(){
 		// $(this).children(".subGenre1").show(800); 
 		$(this).children(".subGenre").show(500); 
 		},

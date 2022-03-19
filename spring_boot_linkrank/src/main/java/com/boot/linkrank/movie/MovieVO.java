@@ -9,6 +9,46 @@ public class MovieVO {
 	private String movieImg;
 	private String genreNo;
 	
+	//네이버API
+	//private String title => movieName;
+	private String link;
+	private String image;
+	private String subtitle;
+	private String pubDate;
+	//private String Director => movieDirector
+	//private String actor => movieActor;
+	private String userRating;
+	
+	public String getLink() {
+		return link;
+	}
+	public void setLink(String link) {
+		this.link = link;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public String getSubtitle() {
+		return subtitle;
+	}
+	public void setSubtitle(String subtitle) {
+		this.subtitle = subtitle;
+	}
+	public String getPubDate() {
+		return pubDate;
+	}
+	public void setPubDate(String pubDate) {
+		this.pubDate = pubDate;
+	}
+	public String getUserRating() {
+		return userRating;
+	}
+	public void setUserRating(String userRating) {
+		this.userRating = userRating;
+	}
 	//디테일뷰 화면 출력할 변수
 	private String mifUrl;
 	
