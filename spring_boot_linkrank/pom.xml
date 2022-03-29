@@ -81,6 +81,15 @@
             <optional>true</optional>
         </dependency>
 		
+		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+		<!-- 크롤링   -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.12.2</version>
+        </dependency>
+		
+		
 	</dependencies>
 
 	<build>

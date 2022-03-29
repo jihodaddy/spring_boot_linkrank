@@ -43,16 +43,7 @@
 					</div>
 				<!-- 무비카드  -->
 			
-				<%-- <!-- 카드 -->
-				 <div class="movieItem">
-				    <a href="${m.link }" class="card">
-				      <img src="${m.image }"  class="movieImg" alt="영화이미지" />
-				      <div>
-				        <h1>${m.movieName }</h1>
-				        <span>${m.userRating }</span>
-				      </div>
-				    </a>
-				  </div> --%>
+				
 						
 				</c:forEach>
 				</div>
