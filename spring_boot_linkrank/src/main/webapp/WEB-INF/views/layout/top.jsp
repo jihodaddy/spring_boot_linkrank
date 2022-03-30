@@ -71,6 +71,7 @@
                     <li><a href="<c:url value='/sub/ratingBoardListView'/>">평점/리뷰</a></li>
                     <li><a href="#">관심 목록</a></li>
                     <li><a href="#">자유게시판</a></li>
+                    <li><a href="/crawrank">순위</a></li>
                     <li><a href="#">이벤트</a></li>
                 </ul>
             </div>

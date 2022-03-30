@@ -23,7 +23,12 @@
                 </div>
                 <div class="movieRank">
                     <div id="movieSlidePanel">
-                        <a href="#"><img src="image/rank/movierank1.jpg" alt="영화순위1" class="movieSlideImg"></a>
+                    	<c:forEach items="${movieRank}" var="rank" >
+                    		<a href="${rank.link }"><img src="${rank.image }" alt="${rank.movieName }" class="movieSlideImg"></a>
+                    	
+                    	
+                    	</c:forEach>
+                    <!--     <a href="#"><img src="image/rank/movierank1.jpg" alt="영화순위1" class="movieSlideImg"></a>
                         <a href="#"><img src="image/rank/movierank2.jpg" alt="영화순위2" class="movieSlideImg"></a>
                         <a href="#"><img src="image/rank/movierank3.jpg" alt="영화순위3" class="movieSlideImg"></a>
                         <a href="#"><img src="image/rank/movierank4.jpg" alt="영화순위4" class="movieSlideImg"></a>
@@ -32,7 +37,7 @@
                         <a href="#"><img src="image/rank/movierank7.jpg" alt="영화순위7" class="movieSlideImg"></a>
                         <a href="#"><img src="image/rank/movierank8.jpg" alt="영화순위8" class="movieSlideImg"></a>
                         <a href="#"><img src="image/rank/movierank9.jpg" alt="영화순위9" class="movieSlideImg"></a>
-                        <a href="#"><img src="image/rank/movierank10.jpg" alt="영화순위10" class="movieSlideImg"></a>
+                        <a href="#"><img src="image/rank/movierank10.jpg" alt="영화순위10" class="movieSlideImg"></a> -->
                     </div>
                 </div>
                 <h2>넷플릭스 시리즈 순위</h2>

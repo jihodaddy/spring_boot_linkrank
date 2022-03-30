@@ -20,7 +20,7 @@ import org.json.simple.parser.ParseException;
 
 
 
-
+	//네이버 영화 검색 API
 	public class MovieSearchService {
 	
 	    public static ArrayList<MovieVO> searchMovie(String keyword) {
