@@ -8,6 +8,8 @@
 .movieTrailer{
 	width: 100%;
 	height: 400px;
+	display: flex; 
+	
 }
 .detailImg{
 	height:400px;

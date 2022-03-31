@@ -79,6 +79,9 @@ public class MovieController {
 	@RequestMapping("/movie/detailViewMovie/{movieNo}")
 	public String detailViewMovie(@PathVariable String movieNo, Model model) {
 		MovieVO mv = service.detailViewMovie(movieNo);
+		
+		
+		
 		ArrayList<BoardVO> bList = bservice.detailMovieBoardView(movieNo);
 		model.addAttribute("movie", mv);
 		model.addAttribute("bList", bList);

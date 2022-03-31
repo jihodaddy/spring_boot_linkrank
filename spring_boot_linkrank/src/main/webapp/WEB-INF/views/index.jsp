@@ -15,8 +15,8 @@
 		
 
         <section id="sectionBox">
+            <h2>넷플릭스 영화 순위</h2>
             <div id="rankSlideShow">
-                <h2>넷플릭스 영화 순위</h2>
                 <div class="prevNextButtonBox">
                     <img class="moviePrevButton" src="image/icon/prev.png">						
                     <img class="movieNextButton" src="image/icon/next.png">						

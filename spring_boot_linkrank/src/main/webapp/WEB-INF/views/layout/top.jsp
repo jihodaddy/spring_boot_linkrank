@@ -34,7 +34,6 @@
             
 	                    <!-- 비로그인 -->
 	                    <c:if test="${empty sessionScope.sid }">
-	                            <a href="<c:url value='/searchMovie'/>"> 네이버 </a>&nbsp;
 	                            <a href="<c:url value='/loginForm'/>"> Login </a>&nbsp;
 	                            <a href="<c:url value='/joinForm'/>">회원가입</a>
 	                   	</c:if>
@@ -68,6 +67,7 @@
             <div id="mainMenuBox">
                 <ul id="menuItem">
                     <li><a href="#" id="showAllMenu">장르별 바로가기 ▼</a></li>
+                    <li><a href="/">HOME</a></li>
                     <li><a href="<c:url value='/sub/ratingBoardListView'/>">평점/리뷰</a></li>
                     <li><a href="#">관심 목록</a></li>
                     <li><a href="#">자유게시판</a></li>
