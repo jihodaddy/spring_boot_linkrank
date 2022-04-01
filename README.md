@@ -29,15 +29,21 @@
   - [2.1](#프로젝트-핵심기능--크롤링) **크롤링** : 크롤링을 통해 다양한 넷플릭스 순위 정보 제공
 
 ## 개발환경
-* 언어
-  * JAVA
-  * HTML
-  * CSS
-  * Java Script
-* 프레임 워크
-* 서버(WAS)
-* 개발도구
-* 상태관리
+<h2 align="center">✔ Tech Stack ✔</h2>
+<h4 align="center">👆Front-End👆</h4>
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/></a>&nbsp 
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/></a>&nbsp 
+  <img src="https://img.shields.io/badge/Javascript-ffb13b?style=flat-square&logo=javascript&logoColor=white"/></a>&nbsp 
+  <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jqueryt&logoColor=white"/></a>&nbsp 
+<br><br>
+<br>
+<h4 align="center">👇Back-End👇</h4>
+<p align="center">
+  <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/></a>&nbsp 
+  <img src="https://img.shields.io/badge/Apache Tomcat-F8DC75?style=flat-square&logo=apachetomcat3&logoColor=white"/></a>&nbsp 
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysqlt&logoColor=white"/></a>&nbsp 
+<br><br>
 <br><br>
 ## DATABASE
 <br><br>
