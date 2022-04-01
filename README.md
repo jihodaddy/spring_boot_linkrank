@@ -1,7 +1,8 @@
 # LINKRANK : 넷플릭스 장르별 링크 및 평점.리뷰 사이트
 <br>
-#
-![screencapture-localhost-8081-2022-01-20-10_48_04](https://user-images.githubusercontent.com/94466572/159131541-c7dba77d-f3d2-4224-b3bb-5c5017821ce8.png)
+
+![메인메뉴](https://user-images.githubusercontent.com/94466572/161275430-159148fd-be10-449d-8ae1-7b4c6b76fe82.jpg)
+
 
 **" NETFLIX 에서  원하는 작품을 쫌더 쉽게 찾아 시청 할수 있도록 장르별 링크, 평점, 리뷰를 볼 수 있는 서비스"**
 
